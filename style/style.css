@@ -1,0 +1,15 @@
+div a {
+    font-size: 100px;
+    color: burlywood;
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+}
+#flex-Blox{
+    justify-content: space-around;
+}
+#flex-Blox div{
+    width: 40px;
+    height: 40px;
+    background-color: crimson;
+}
