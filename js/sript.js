@@ -48,28 +48,32 @@ function forthButton()
         }
         return sum;
       }
+      var length = function (term) {
+        return Object.keys(term).length;
+      };
 
       var term = {Canada: 10, Germany: 13, Spain: 22, InMyHouse: -10}
       var summed = sum( term );
-      document.write('temperature is - '+ summed/4);
+      var lengtht = length( term );
+      document.write('temperature is - '+ summed/lengtht);
 
-    //   возвращает максимальную температуру.
+     //   возвращает максимальную температуру.
 
-    var term = {
+     var term = {
         Canada: 10, 
         Germany: 13,
         Spain: 22, 
         InMyHouse: -10
     }
-    var max = getMaxValue
+   
     function getMaxValue(term){
-        var max = term[0]; // берем первый элемент массива
-        for (var i = 0; i < term.length; i++) { // переберем весь массив
-            // если элемент больше, чем в переменной, то присваиваем его значение переменной
-            if (max < term[i]) max = term[i]; 
+        var max = 0;
+        for(var key in term){ 
+            if(max < term[key]){ 
+                max = term[key];
+            }
         }
-        // возвращаем максимальное значение
-        return max;
+        return max; 
     }
     
-   document.write('<br>Max value is ' + Math.max(term));
+   document.write('<br>Max value is ' + getMaxValue(term)); 
